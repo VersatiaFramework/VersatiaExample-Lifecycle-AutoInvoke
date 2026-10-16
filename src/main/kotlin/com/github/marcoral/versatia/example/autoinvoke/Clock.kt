@@ -11,5 +11,5 @@ class Clock {
 
     /** A function of a bean is called on the bean instance, once every bean exists. */
     @AutoInvoke(EventType.PLUGIN_START_ONLY)
-    fun announce(plugin: AutoInvokePlugin) = log("bean function, ${plugin.name} injected")
+    fun announce(plugin: AutoInvokePlugin) = plugin.logger.info("Clock.announce(): bean function, ${plugin.name} injected")
 }

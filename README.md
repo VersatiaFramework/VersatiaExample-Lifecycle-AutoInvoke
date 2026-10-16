@@ -1,32 +1,35 @@
-    # VersatiaExample-Lifecycle-AutoInvoke
+# VersatiaExample-Lifecycle-AutoInvoke
 
-    Functions run at start, reload or stop with their parameters injected: on the main class, on a bean and on an object.
+Functions run at start, reload or stop with their parameters injected: on the main class, on a bean and on an object.
 
-    Part of the [Versatia examples](https://github.com/VersatiaFramework/VersatiaExamples); documentation: [Auto-invoked functions](https://versatiaframework.github.io/VersatiaDocs/docs/lifecycle/auto-invoke).
+Part of the [Versatia examples](https://github.com/VersatiaFramework/VersatiaExamples); documentation: [Auto-invoked functions](https://versatiaframework.github.io/VersatiaDocs/docs/lifecycle/auto-invoke).
 
-    **Start with** [`AutoInvokePlugin.kt`](src/main/kotlin/com/github/marcoral/versatia/example/autoinvoke/AutoInvokePlugin.kt).
+**Start with** [`AutoInvokePlugin.kt`](src/main/kotlin/com/github/marcoral/versatia/example/autoinvoke/AutoInvokePlugin.kt).
 
-    ## What the log shows
+## What the log shows
 
-    ```
-    [Clock] bean function, VersatiaExample-Lifecycle-AutoInvoke injected
-[Statistics] start number 1
-started at ...
-(on disable) stopping
-    ```
-
+```
+[VersatiaExample-Lifecycle-AutoInvoke] Clock.announce(): bean function, VersatiaExample-Lifecycle-AutoInvoke injected
+[VersatiaExample-Lifecycle-AutoInvoke] Statistics: run number 1
+[VersatiaExample-Lifecycle-AutoInvoke] started at ...
+(on disable) [VersatiaExample-Lifecycle-AutoInvoke] stopping
+```
 
 ## Things to try
 
-- Change `hello` to `PLUGIN_START_ONLY` and reload the server: it no longer runs on reload while
-  `Statistics.countStart` still does.
-- Give `goodbye` a parameter: beans are gone at stop, so the plugin fails to disable cleanly with a
-  message naming the function.
+- Change `hello` to `PLUGIN_START_ONLY` and run `/versatia reload VersatiaExample-Lifecycle-AutoInvoke`:
+  `hello` no longer runs, while `Statistics.countRun` logs `run number 2`. A server restart is a
+  new start, not a reload, so it runs `hello` again and counts from 1.
+- Give `goodbye` a `clock: Clock` parameter: beans live as long as the plugin, so the function
+  receives at stop the same `Clock` that was created at start.
 
 ## Building
 
-Requires JDK 21 and VersatiaAPI in your local Maven repository (`./gradlew publishToMavenLocal`
-in its checkout); running it requires a Paper 1.21.4 server with VersatiaCore installed.
+Requires JDK 21 and VersatiaStarter with what it exports (VersatiaAPI, the module APIs) in your
+local Maven repository (`./gradlew publishToMavenLocal` in each checkout; see
+[Building the framework](https://versatiaframework.github.io/VersatiaDocs/docs/contributing/building));
+running it requires a Paper 1.21.4 server with VersatiaCore installed, and the
+[CommandAPI](https://commandapi.jorel.dev) 12.x plugin for `/versatia reload`.
 
 ```bash
 ./gradlew build
