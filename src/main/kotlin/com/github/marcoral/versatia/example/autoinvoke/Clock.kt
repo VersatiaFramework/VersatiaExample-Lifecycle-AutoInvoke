@@ -1,6 +1,6 @@
 package com.github.marcoral.versatia.example.autoinvoke
 
-import com.github.marcoral.versatia.EventType
+import com.github.marcoral.versatia.Phase
 import com.github.marcoral.versatia.di.LocalBean
 import com.github.marcoral.versatia.lifecycle.AutoInvoke
 import java.time.Instant
@@ -10,6 +10,6 @@ class Clock {
     fun now() = Instant.now()
 
     /** A function of a bean is called on the bean instance, once every bean exists. */
-    @AutoInvoke(EventType.PLUGIN_START_ONLY)
+    @AutoInvoke(Phase.PLUGIN_START_ONLY)
     fun announce(plugin: AutoInvokePlugin) = plugin.logger.info("Clock.announce(): bean function, ${plugin.name} injected")
 }

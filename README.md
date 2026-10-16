@@ -9,9 +9,9 @@ Part of the [Versatia examples](https://github.com/VersatiaFramework/VersatiaExa
 ## What the log shows
 
 ```
+[VersatiaExample-Lifecycle-AutoInvoke] started at ...
 [VersatiaExample-Lifecycle-AutoInvoke] Clock.announce(): bean function, VersatiaExample-Lifecycle-AutoInvoke injected
 [VersatiaExample-Lifecycle-AutoInvoke] Statistics: run number 1
-[VersatiaExample-Lifecycle-AutoInvoke] started at ...
 (on disable) [VersatiaExample-Lifecycle-AutoInvoke] stopping
 ```
 
