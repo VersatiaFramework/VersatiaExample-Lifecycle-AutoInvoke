@@ -2,9 +2,9 @@
 
 Functions run at start, reload or stop with their parameters injected: on the main class, on a bean and on an object.
 
-Part of the [Versatia examples](https://github.com/VersatiaFramework/VersatiaExamples); documentation: [Auto-invoked functions](https://versatiaframework.github.io/VersatiaDocs/docs/lifecycle/auto-invoke).
+Part of the [Versatia examples](https://github.com/VersatiaFramework/VersatiaExamples); documentation: [Auto-invoked functions](https://versatia.dev/docs/lifecycle/auto-invoke).
 
-**Start with** [`AutoInvokePlugin.kt`](src/main/kotlin/com/github/marcoral/versatia/example/autoinvoke/AutoInvokePlugin.kt).
+**Start with** [`AutoInvokePlugin.kt`](src/main/kotlin/dev/versatia/example/autoinvoke/AutoInvokePlugin.kt).
 
 ## What the log shows
 
@@ -27,7 +27,7 @@ Part of the [Versatia examples](https://github.com/VersatiaFramework/VersatiaExa
 
 Requires JDK 21 and VersatiaAPI in your
 local Maven repository (`./gradlew publishToMavenLocal` in each checkout; see
-[Building the framework](https://versatiaframework.github.io/VersatiaDocs/docs/contributing/building));
+[Building the framework](https://versatia.dev/docs/contributing/building));
 running it requires a Paper 1.21.4 server with VersatiaCore installed, and the
 [CommandAPI](https://commandapi.jorel.dev) 12.x plugin for `/versatia reload`.
 

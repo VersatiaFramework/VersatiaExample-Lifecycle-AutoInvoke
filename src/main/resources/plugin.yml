@@ -1,6 +1,6 @@
 name: VersatiaExample-Lifecycle-AutoInvoke
 version: '${version}'
-main: com.github.marcoral.versatia.example.autoinvoke.AutoInvokePlugin
+main: dev.versatia.example.autoinvoke.AutoInvokePlugin
 api-version: '1.21'
 author: Versatia
 description: Functions invoked at lifecycle phases with injected parameters.

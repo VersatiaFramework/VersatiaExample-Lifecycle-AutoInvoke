@@ -1,7 +1,7 @@
-package com.github.marcoral.versatia.example.autoinvoke
+package dev.versatia.example.autoinvoke
 
-import com.github.marcoral.versatia.Phase
-import com.github.marcoral.versatia.lifecycle.AutoInvoke
+import dev.versatia.Phase
+import dev.versatia.lifecycle.AutoInvoke
 import java.util.logging.Logger
 
 /** Objects carry auto-invoked functions too; no bean is needed. */

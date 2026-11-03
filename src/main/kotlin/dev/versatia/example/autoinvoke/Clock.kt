@@ -1,8 +1,8 @@
-package com.github.marcoral.versatia.example.autoinvoke
+package dev.versatia.example.autoinvoke
 
-import com.github.marcoral.versatia.Phase
-import com.github.marcoral.versatia.di.LocalBean
-import com.github.marcoral.versatia.lifecycle.AutoInvoke
+import dev.versatia.Phase
+import dev.versatia.di.LocalBean
+import dev.versatia.lifecycle.AutoInvoke
 import java.time.Instant
 
 @LocalBean

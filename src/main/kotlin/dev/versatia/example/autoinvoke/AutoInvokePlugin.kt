@@ -1,8 +1,8 @@
-package com.github.marcoral.versatia.example.autoinvoke
+package dev.versatia.example.autoinvoke
 
-import com.github.marcoral.versatia.Phase
-import com.github.marcoral.versatia.VersatiaPlugin
-import com.github.marcoral.versatia.lifecycle.AutoInvoke
+import dev.versatia.Phase
+import dev.versatia.VersatiaPlugin
+import dev.versatia.lifecycle.AutoInvoke
 
 /** `onEnable` is final; lifecycle work is declared with `@AutoInvoke` instead. Private is fine. */
 class AutoInvokePlugin : VersatiaPlugin() {
